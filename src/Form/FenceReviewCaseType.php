@@ -2,19 +2,19 @@
 
 namespace App\Form;
 
-use App\Entity\ResidentComplaintBoardCase;
+use App\Entity\FenceReviewCase;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class ResidentComplaintBoardCaseType extends AbstractType
+class FenceReviewCaseType extends AbstractType
 {
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => ResidentComplaintBoardCase::class,
+            'data_class' => FenceReviewCase::class,
             'board' => null,
         ]);
     }
@@ -36,21 +36,22 @@ class ResidentComplaintBoardCaseType extends AbstractType
 
         $builder
             ->add('complainant')
-            ->add('complainantCPR')
-            ->add('complainantPhone')
             ->add('complainantAddress')
             ->add('complainantZip')
-            ->add('hasVacated')
-            ->add('leaseAddress')
-            ->add('leaseZip')
-            ->add('leaseCity')
-            ->add('previousCasesAtLease')
+            ->add('complainantCPR')
+            ->add('complainantCadastralNumber')
+            ->add('accused')
+            ->add('accusedAddress')
+            ->add('accusedZip')
+            ->add('accusedCPR')
+            ->add('accusedCadastralNumber')
+            ->add('conditions')
+            ->add('complainantClaim')
             ->add('caseType', ChoiceType::class, [
                 'choices' => [
                     $caseTypesAssociative,
                 ],
             ])
-            ->add('feePaid')
             ->add('createCase', SubmitType::class, ['label' => 'Create case'])
         ;
     }

@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\ResidentComplaintBoardCaseRepository;
+use App\Repository\RentBoardCaseRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=ResidentComplaintBoardCaseRepository::class)
+ * @ORM\Entity(repositoryClass=RentBoardCaseRepository::class)
  */
-class ResidentComplaintBoardCase extends CaseEntity
+class RentBoardCase extends CaseEntity
 {
     /**
      * @ORM\Column(type="integer", nullable=true)

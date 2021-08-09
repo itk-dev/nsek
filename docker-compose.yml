@@ -21,6 +21,8 @@ services:
       - MYSQL_PASSWORD=db
       - MYSQL_DATABASE=db
       #- ENCRYPT=1 # Uncomment to enable database encryption.
+    labels:
+      com.symfony.server.service-prefix: 'DATABASE'
 
   phpfpm:
     image: itkdev/php7.4-fpm:latest

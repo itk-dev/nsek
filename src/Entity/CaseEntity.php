@@ -12,7 +12,7 @@ use Symfony\Component\Uid\UuidV4;
  * @ORM\Entity(repositoryClass=CaseEntityRepository::class)
  * @ORM\InheritanceType("JOINED")
  * @ORM\DiscriminatorColumn(name="discr", type="string")
- * @ORM\DiscriminatorMap({"caseEntity" = "CaseEntity", "residentComplaintBoardCase" = "ResidentComplaintBoardCase"})
+ * @ORM\DiscriminatorMap({"caseEntity" = "CaseEntity", "residentComplaintBoardCase" = "ResidentComplaintBoardCase", "rentBoardCase" = "RentBoardCase", "fenceReviewCase" = "FenceReviewCase"})
  * @ORM\EntityListeners({"App\Logging\EntityListener\CaseListener"})
  */
 abstract class CaseEntity
