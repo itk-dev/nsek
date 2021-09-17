@@ -1,0 +1,34 @@
+{% extends 'layout-with-submenu.html.twig' %}
+
+{% trans_default_domain 'notes' %}
+
+{% block title %}{% trans %}Edit note{% endtrans %}{% endblock %}
+
+{% block header %}
+    <div class="row">
+        <div class="col">
+            <h1>{% trans %}Edit note{% endtrans %}</h1>
+        </div>
+        <div class="col-auto">
+            {% set note_id = note.id|e %}
+            <a class="btn btn-secondary" href="{{ url('note_index', {id: case.id, 'noteShown': note_id}) }}" role="button">{% trans %}Cancel{% endtrans %}</a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <main role="main" class="col-12 mt-3">
+        {{ form_start(note_form) }}
+        <div class="form-group">
+            <label >{% trans %}Subject{% endtrans %}</label>
+            {{ form_widget(note_form.subject, {'attr': {'type': 'text','class': 'form-control', 'aria-describedby': 'helpName'}}) }}
+            <small id="helpId" class="form-text text-muted">{% trans %}Add a descriptive subject for ease of finding the note later on{% endtrans %}</small>
+        </div>
+        <div class="form-group">
+            <label for="">{% trans %}Note content{% endtrans %}</label>
+            {{ form_widget(note_form.content, {'attr': {'type': 'textarea','class': 'form-control', 'rows': 3}}) }}
+        </div>
+        <button class="btn btn-primary float-right">{{ button_label|default('Edit note'|trans([], 'notes', 'da')) }}</button>
+        {{ form_rest(note_form) }}
+    </main>
+{% endblock %}

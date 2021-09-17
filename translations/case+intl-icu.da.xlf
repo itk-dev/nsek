@@ -541,6 +541,10 @@
         <source>All municipalities</source>
         <target>Alle kommuner</target>
       </trans-unit>
+      <trans-unit id="J_zRY64" resname="Create note">
+        <source>Create note</source>
+        <target>Opret note</target>
+      </trans-unit>
       <trans-unit id="6kE0Yr5" resname="Edit party">
         <source>Edit party</source>
         <target>Rediger part</target>

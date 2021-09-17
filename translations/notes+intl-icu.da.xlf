@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="da" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="KZ5gTM." resname="Edit note">
+        <source>Edit note</source>
+        <target>Rediger note</target>
+      </trans-unit>
+      <trans-unit id="GXZu1sy" resname="Cancel">
+        <source>Cancel</source>
+        <target>Annuller</target>
+      </trans-unit>
+      <trans-unit id="aJcSg4Q" resname="Subject">
+        <source>Subject</source>
+        <target>Emne</target>
+      </trans-unit>
+      <trans-unit id="VK5uJNs" resname="Add a descriptive subject for ease of finding the note later on">
+        <source>Add a descriptive subject for ease of finding the note later on</source>
+        <target>Tilføj et beskrivende emne for lettere at kunne finde noten senere</target>
+      </trans-unit>
+      <trans-unit id="0psjY1J" resname="Note content">
+        <source>Note content</source>
+        <target>Note indhold</target>
+      </trans-unit>
+      <trans-unit id="hl6J3nj" resname="Upload">
+        <source>Upload</source>
+        <target>Rediger</target>
+      </trans-unit>
+      <trans-unit id="inUlsUk" resname="Notes">
+        <source>Notes</source>
+        <target>Noter</target>
+      </trans-unit>
+      <trans-unit id="y181RZk" resname="Create new note">
+        <source>Create new note</source>
+        <target>Opret ny note</target>
+      </trans-unit>
+      <trans-unit id="ndqry5I" resname="Add a quick note">
+        <source>Add a quick note</source>
+        <target>Opret en note</target>
+      </trans-unit>
+      <trans-unit id="Myd0kC4" resname="Hide quick note">
+        <source>Hide quick note</source>
+        <target>Fjern opret note</target>
+      </trans-unit>
+      <trans-unit id="_CT5F_I" resname="Show quick note">
+        <source>Show quick note</source>
+        <target>Vis opret note</target>
+      </trans-unit>
+      <trans-unit id="_UiT6nQ" resname="List of existing notes">
+        <source>List of existing notes</source>
+        <target>Liste af noter</target>
+      </trans-unit>
+      <trans-unit id="cezsiM6" resname="All notes">
+        <source>All notes</source>
+        <target>Alle noter</target>
+      </trans-unit>
+      <trans-unit id="ElRmuCH" resname="By">
+        <source>By</source>
+        <target>Af</target>
+      </trans-unit>
+      <trans-unit id="ImnkQgY" resname="List functions">
+        <source>List functions</source>
+        <target>Handlinder</target>
+      </trans-unit>
+      <trans-unit id="REE8PZe" resname="Are you sure you want to delete this item?">
+        <source>Are you sure you want to delete this item?</source>
+        <target>Er du sikker på at du vil slette dette element?</target>
+      </trans-unit>
+      <trans-unit id="uA5PRCM" resname="Delete note">
+        <source>Delete note</source>
+        <target>Slet note</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

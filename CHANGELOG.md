@@ -39,6 +39,7 @@ MunicipalityListener, BoardListener and their tests.
   uploaded documents in document index.
 - [TVIST1-185](https://jira.itkdev.dk/browse/TVIST1-185): Added ability to 'soft' delete documents.
 - [TVIST1-186](https://jira.itkdev.dk/browse/TVIST1-186): Added ability to copy documents to other cases.
+- [TVIST1-227](https://jira.itkdev.dk/browse/TVIST1-227): Added ability to create, edit and remove notes.
 
 ### Changed
 - [NSEK-138](https://jira.itkdev.dk/browse/NSEK-138): Updating Cypress to 6.5.0 so the same version is used project wide.

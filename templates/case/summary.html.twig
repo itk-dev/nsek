@@ -52,25 +52,6 @@
     },
 ] %}
 
-{% set casenotes = [
-    {
-        "date": "19/01/2019",
-        "title": "Overskrift Pellentesque iaculis mi sapien, at convallis mauris rutrum a."
-    },
-    {
-        "date": "19/01/2019",
-        "title": "Overskrift Pellentesque iaculis mi sapien, at convallis mauris rutrum a."
-    },
-    {
-        "date": "19/01/2019",
-        "title": "Overskrift Pellentesque iaculis mi sapien, at convallis mauris rutrum a."
-    },
-    {
-        "date": "19/01/2019",
-        "title": "Overskrift Pellentesque iaculis mi sapien, at convallis mauris rutrum a."
-    },
-] %}
-
 {% block title %}{% trans %}Casesummary{% endtrans %}{% endblock %}
 
 {% block header %}
@@ -137,17 +118,18 @@
                         <h2 id="section_latest_notes">{% trans %}Latest notes{% endtrans %}</h2>
                     </div>
                     <div class="col-auto">
-                        <a name="" id="" class="btn btn-success float-right" href={{ url("case_notes", {id: case.id}) }} role="button">{% trans %}Create new note{% endtrans %}</a>
+                        <a name="" id="" class="btn btn-success float-right" href={{ url("note_index", {id: case.id, 'showQuickNote': true}) }} role="button">{% trans %}Create new note{% endtrans %}</a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <div class="list-group">
-                            {% for item in casenotes %}
-                                <a href="#" class="list-group-item list-group-item-action">
+                            {% for note in notes %}
+                                {% set note_id = note.id|e %}
+                                <a href="{{ url("note_index", {id: case.id, 'noteShown': note_id}) }}" class="list-group-item list-group-item-action">
                                     <div class="d-flex w-100 justify-content-between">
-                                        <span class="mr-3">{{ item.date|e }}</span>
-                                        <p class="mb-1">{{ item.title|e }}</p>
+                                        <span class="mr-3">{{ note.createdAt|date('d/m/Y') }}</span>
+                                        <p class="mb-1 text-truncate">{{ note.subject|e }}</p>
                                     </div>
                                 </a>
                             {% endfor %}
