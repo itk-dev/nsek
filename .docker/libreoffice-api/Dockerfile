@@ -1,5 +1,5 @@
 # https://hub.docker.com/r/linuxserver/libreoffice
-FROM linuxserver/libreoffice:7.2.2
+FROM linuxserver/libreoffice:7.6.7
 
 # https://github.com/unoconv/unoconv#installing-unoconv
 # RUN apk add --update --no-cache unoconv npm
@@ -11,9 +11,13 @@ ENV UNO_URL https://raw.githubusercontent.com/dagwieers/unoconv/master/unoconv
 RUN apk add --update --no-cache npm msttcorefonts-installer fontconfig \
     && wget $UNO_URL -O /usr/local/bin/unoconv \
     && chmod +x /usr/local/bin/unoconv \
-    && ln -s /usr/bin/python3 /usr/bin/python \
     && update-ms-fonts \
     && fc-cache -f
+
+# TODO: Install distutils via setuptools
+# linuxserver/libreoffice:7.6.7 comes with python 3.12
+# which does not come with distutils
+# cf. https://docs.python.org/3/whatsnew/3.12.html
 
 # Unoconv is deprecated (cf.
 # https://github.com/unoconv/unoconv#unoconv-is-deprecated), but works great. In
